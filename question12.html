@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculates the distance between two vectors.</title>
+    <script>
+      const vectorDistance = (x, y) =>
+        Math.sqrt(x.reduce((acc, val, i) => acc + Math.pow(val - y[i], 2), 0));
+      console.log(vectorDistance([10, 0, 5], [20, 0, 10]));
+    </script>
+  </head>
+</html>

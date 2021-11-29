@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Write a JavaScript program to check if a numeric array is sorted or not.
+    </title>
+    <script>
+      function arraySortedOrNot(a, n) {
+        // Base case
+        if (n == 1 || n == 0) {
+          return true;
+        }
+
+        return a[n - 1] >= a[n - 2] && arraySortedOrNot(a, n - 1);
+      }
+
+      let arr = [20, 23, 23, 45, 78, 88];
+      let n = arr.length;
+
+      if (arraySortedOrNot(arr, n)) {
+        console.log("Yes");
+      } else {
+        console.log("No");
+      }
+    </script>
+  </head>
+</html>
